@@ -1,0 +1,30 @@
+version: "3"
+services:
+  mysql:
+    container_name: BDAXA
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=axa
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=useraxa
+      - MYSQL_PASSWORD=1234
+      - MYSQL_TCP_PORT=3306
+    volumes:
+      # Montamos un volumen para MySQL para no perder los datos de la bd
+      - ./volumenes/mysql:/var/lib/mysql
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+  miservicio_php_axa:
+    build: .
+    volumes:
+      # Montamos nuestra web desde fuera en el directorio web del contenedor
+      - ./webaxa/:/var/www/html                                                                          
+    image: 8.0-apache
+    ports:
+      - 80:80
+    links: 
+      - mysql
+volumes:
+  config: {}
