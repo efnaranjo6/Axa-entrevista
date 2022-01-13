@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Static/imagenes/pestana.ico" />
     <title>Axa</title>
     <link href="../Static/libreria/bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Static/css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container position-relative">
-        <div class="card col-md-10 mt-5 position-absolute top-50 start-50 translate-middle-x">
+    <div class="container contenedor">
+        <div class="card col-md-10 targeta">
             <form id="frmBusqueda">
                 <input type="hidden" name="procesador" id="procesador">
-                <h5 class="card-header">Axa</h5>
+                <img src="../Static/imagenes/unnamed.jpg" class="col-sm-4">
                 <div class="card-body">
                     <h5 class="card-title">Busqueda de facturas</h5>
                     <div class="row">
                         <div class="col-sm-6">
-                            <label for="exampleFormControlInput1" class="form-label">Tipo de documento</label>
+                            <label for="exampleFormControlInput1" class="form-label">Tipo de documento :</label>
                             <select name="tipo_documento" class="form-select" aria-label="Default select example" id="tipo_documento">
                             </select>
                         </div>
                         <div class="col-sm-6">
-                            <label for="exampleFormControlInput1" class="form-label">Numero de documento</label>
+                            <label for="exampleFormControlInput1" class="form-label">Numero de documento :</label>
                             <input type="number" class="form-control" name="numero_documento" id="numero_documento">
                         </div>                        
                     </div>

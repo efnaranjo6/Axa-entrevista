@@ -1,0 +1,9 @@
+.contenedor{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.targeta{
+    margin-top: 15%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
