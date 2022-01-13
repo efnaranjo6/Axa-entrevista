@@ -1,8 +1,8 @@
 <?php
 require '../Model/Funcionalidad.php';
 
-if(isset($_POST['prosecution'])){
-    $procesador = $_POST['prosecution'];
+if(isset($_POST['procesador'])){
+    $procesador = $_POST['procesador'];
 }else{
     $procesador = 1;
 }
@@ -14,12 +14,15 @@ if($procesador==1){
         $name =$key->getNameTipoDocumento();
         $data[] =
         array(
-            "id_trade" => $id,
+            "id_tipo" => $id,
             "name" => $name
         );
     endforeach;
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
 }
 else if($procesador==2){
+    $Numero_documento = $_POST['numero_documento'];
+    $Tipo_documento = $_POST['tipo_documento'];
     $Funcionalidad->Search($entityManager,$Numero_documento,$Tipo_documento);
+
 }
