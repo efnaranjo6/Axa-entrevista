@@ -17,6 +17,10 @@ class Factura {
     */
     private $valor_factura;
     /**
+     * @ORM\Column(type="string")
+    */
+    private $num_plan_factura;
+    /**
     * @ORM\Column(type="date")
     */
     private $vencimineto_factura;
@@ -111,6 +115,24 @@ class Factura {
     public function setPersona($Persona): self
     {
         $this->Persona = $Persona;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of num_plan_factura
+     */
+    public function getNumPlanFactura()
+    {
+        return $this->num_plan_factura;
+    }
+
+    /**
+     * Set the value of num_plan_factura
+     */
+    public function setNumPlanFactura($num_plan_factura): self
+    {
+        $this->num_plan_factura = $num_plan_factura;
 
         return $this;
     }
